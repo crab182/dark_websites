@@ -1,0 +1,620 @@
+{
+  "version": 1,
+  "title": "dark_websites — a reference database of the useful, lesser-known web",
+  "updated": "2026-06-16",
+  "facets": {
+    "obscure": "Hidden corners most people never reach — independent search, the small web, the strange-but-real.",
+    "niche": "Built for one community or craft; narrow audience, high signal.",
+    "kitsch": "Playful, retro, hand-made, or gloriously useless. The web having fun.",
+    "broad": "Wide coverage — general reference and gateways that fan out everywhere.",
+    "deep": "Goes far down — long-form, scholarly, or exhaustive on its subject.",
+    "narrow": "Does one job and does it well — a single sharp tool or lookup."
+  },
+  "sites": [
+    {
+      "id": "are-na",
+      "name": "Are.na",
+      "url": "https://www.are.na/",
+      "description": "A calm, ad-free tool for collecting and connecting ideas, images and links into visual research channels.",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "tags": [
+        "research",
+        "bookmarks",
+        "tools"
+      ],
+      "added": "2026-06-16"
+    },
+    {
+      "id": "openlibrary",
+      "name": "Open Library",
+      "url": "https://openlibrary.org/",
+      "description": "An open, editable catalogue aiming for one web page per book ever published, with many free to borrow.",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "tags": [
+        "books",
+        "library",
+        "reference"
+      ],
+      "added": "2026-06-15"
+    },
+    {
+      "id": "kagi-smallweb",
+      "name": "Kagi Small Web",
+      "url": "https://kagi.com/smallweb/",
+      "description": "A live stream of fresh posts from independent blogs and personal sites — the non-algorithmic web.",
+      "facets": [
+        "obscure",
+        "niche"
+      ],
+      "tags": [
+        "small-web",
+        "blogs",
+        "discovery"
+      ],
+      "added": "2026-06-14"
+    },
+    {
+      "id": "1mb-club",
+      "name": "1MB Club",
+      "url": "https://1mb.club/",
+      "description": "A directory of websites that weigh less than one megabyte — a quiet protest against the bloated web.",
+      "facets": [
+        "niche",
+        "kitsch"
+      ],
+      "tags": [
+        "small-web",
+        "performance",
+        "directory"
+      ],
+      "added": "2026-06-12"
+    },
+    {
+      "id": "wikenigma",
+      "name": "Wikenigma",
+      "url": "https://wikenigma.org.uk/",
+      "description": "An encyclopedia of the unknown — a catalogue of gaps in human knowledge and unanswered questions.",
+      "facets": [
+        "obscure",
+        "niche"
+      ],
+      "tags": [
+        "wiki",
+        "science",
+        "curio"
+      ],
+      "added": "2026-06-09"
+    },
+    {
+      "id": "freesound",
+      "name": "Freesound",
+      "url": "https://freesound.org/",
+      "description": "A huge collaborative database of Creative Commons sound clips — field recordings, effects, loops.",
+      "facets": [
+        "niche",
+        "broad"
+      ],
+      "tags": [
+        "audio",
+        "creative-commons",
+        "library"
+      ],
+      "added": "2026-06-09"
+    },
+    {
+      "id": "refseek",
+      "name": "RefSeek",
+      "url": "https://www.refseek.com/",
+      "description": "An academic search engine for students and researchers, indexing documents, encyclopedias and journals.",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "tags": [
+        "search",
+        "academic",
+        "reference"
+      ],
+      "added": "2026-06-04"
+    },
+    {
+      "id": "neocities",
+      "name": "Neocities",
+      "url": "https://neocities.org/",
+      "description": "Free static web hosting reviving the spirit of GeoCities. Browse a directory of hand-made personal sites.",
+      "facets": [
+        "kitsch",
+        "obscure"
+      ],
+      "tags": [
+        "small-web",
+        "hosting",
+        "community"
+      ],
+      "added": "2026-06-04"
+    },
+    {
+      "id": "base-search",
+      "name": "BASE",
+      "url": "https://www.base-search.net/",
+      "description": "Bielefeld Academic Search Engine — one of the largest indexes of open-access scholarly material on the web.",
+      "facets": [
+        "deep",
+        "broad"
+      ],
+      "tags": [
+        "search",
+        "academic",
+        "open-access"
+      ],
+      "added": "2026-06-04"
+    },
+    {
+      "id": "neal-fun",
+      "name": "neal.fun",
+      "url": "https://neal.fun/",
+      "description": "A collection of playful interactive toys and visual experiments — 'The Size of Space', 'Deep Sea' and more.",
+      "facets": [
+        "kitsch",
+        "niche"
+      ],
+      "tags": [
+        "interactive",
+        "toys",
+        "art"
+      ],
+      "added": "2026-05-28"
+    },
+    {
+      "id": "pudding",
+      "name": "The Pudding",
+      "url": "https://pudding.cool/",
+      "description": "Visual essays that explain ideas debated in culture through data, animation and interaction.",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "tags": [
+        "data",
+        "essays",
+        "interactive"
+      ],
+      "added": "2026-05-28"
+    },
+    {
+      "id": "everything2",
+      "name": "Everything2",
+      "url": "https://everything2.com/",
+      "description": "A pre-Wikipedia collaborative writing community — part encyclopedia, part literary playground, still alive.",
+      "facets": [
+        "obscure",
+        "kitsch"
+      ],
+      "tags": [
+        "wiki",
+        "writing",
+        "community"
+      ],
+      "added": "2026-05-28"
+    },
+    {
+      "id": "tvtropes",
+      "name": "TV Tropes",
+      "url": "https://tvtropes.org/",
+      "description": "A vast, hyperlinked wiki cataloguing storytelling devices across every medium. Easy to lose an afternoon.",
+      "facets": [
+        "broad",
+        "deep",
+        "kitsch"
+      ],
+      "tags": [
+        "wiki",
+        "media",
+        "reference"
+      ],
+      "added": "2026-05-21"
+    },
+    {
+      "id": "devdocs",
+      "name": "DevDocs",
+      "url": "https://devdocs.io/",
+      "description": "Fast, searchable, offline-capable API documentation for hundreds of languages and libraries in one place.",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "tags": [
+        "dev",
+        "docs",
+        "reference"
+      ],
+      "added": "2026-05-21"
+    },
+    {
+      "id": "caniuse",
+      "name": "Can I use",
+      "url": "https://caniuse.com/",
+      "description": "Browser support tables for HTML, CSS and JS features. The reference for what's safe to ship.",
+      "facets": [
+        "narrow",
+        "niche"
+      ],
+      "tags": [
+        "dev",
+        "web",
+        "lookup"
+      ],
+      "added": "2026-05-21"
+    },
+    {
+      "id": "regex101",
+      "name": "regex101",
+      "url": "https://regex101.com/",
+      "description": "Build and debug regular expressions with live highlighting and a plain-English explanation of each token.",
+      "facets": [
+        "narrow",
+        "broad"
+      ],
+      "tags": [
+        "tools",
+        "regex",
+        "dev"
+      ],
+      "added": "2026-05-14"
+    },
+    {
+      "id": "explainshell",
+      "name": "explainshell",
+      "url": "https://explainshell.com/",
+      "description": "Paste a shell command and it annotates every flag and argument with the matching man-page text.",
+      "facets": [
+        "narrow",
+        "niche"
+      ],
+      "tags": [
+        "tools",
+        "shell",
+        "reference"
+      ],
+      "added": "2026-05-14"
+    },
+    {
+      "id": "cyberchef",
+      "name": "CyberChef",
+      "url": "https://gchq.github.io/CyberChef/",
+      "description": "The 'cyber swiss-army knife' — encode, decode, encrypt, parse and analyze data by stacking operations.",
+      "facets": [
+        "narrow",
+        "deep"
+      ],
+      "tags": [
+        "tools",
+        "security",
+        "data"
+      ],
+      "added": "2026-05-14"
+    },
+    {
+      "id": "shapecatcher",
+      "name": "Shapecatcher",
+      "url": "https://shapecatcher.com/",
+      "description": "Draw a symbol with your mouse and it finds the matching Unicode character.",
+      "facets": [
+        "narrow",
+        "niche"
+      ],
+      "tags": [
+        "tools",
+        "unicode",
+        "lookup"
+      ],
+      "added": "2026-05-07"
+    },
+    {
+      "id": "forvo",
+      "name": "Forvo",
+      "url": "https://forvo.com/",
+      "description": "Hear how words and names are pronounced by native speakers in dozens of languages.",
+      "facets": [
+        "narrow",
+        "niche"
+      ],
+      "tags": [
+        "language",
+        "audio",
+        "lookup"
+      ],
+      "added": "2026-05-07"
+    },
+    {
+      "id": "detexify",
+      "name": "Detexify",
+      "url": "https://detexify.kirelabs.org/classify.html",
+      "description": "Draw a math symbol and get the LaTeX command for it. A lifesaver while writing papers.",
+      "facets": [
+        "narrow",
+        "niche"
+      ],
+      "tags": [
+        "tools",
+        "latex",
+        "lookup"
+      ],
+      "added": "2026-05-07"
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata",
+      "url": "https://www.wikidata.org/",
+      "description": "The structured, machine-readable knowledge base behind Wikipedia. Query it with SPARQL.",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "tags": [
+        "data",
+        "reference",
+        "knowledge-base"
+      ],
+      "added": "2026-04-30"
+    },
+    {
+      "id": "ourworldindata",
+      "name": "Our World in Data",
+      "url": "https://ourworldindata.org/",
+      "description": "Research and interactive charts on global living conditions — health, energy, poverty, climate.",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "tags": [
+        "data",
+        "charts",
+        "reference"
+      ],
+      "added": "2026-04-30"
+    },
+    {
+      "id": "etymonline",
+      "name": "Online Etymology Dictionary",
+      "url": "https://www.etymonline.com/",
+      "description": "Where words come from — origins, first known use, and how meanings drifted over centuries.",
+      "facets": [
+        "narrow",
+        "deep"
+      ],
+      "tags": [
+        "language",
+        "lookup",
+        "reference"
+      ],
+      "added": "2026-04-30"
+    },
+    {
+      "id": "public-domain-review",
+      "name": "The Public Domain Review",
+      "url": "https://publicdomainreview.org/",
+      "description": "Essays and collections drawn from out-of-copyright art, books and film. Beautiful historical oddities.",
+      "facets": [
+        "kitsch",
+        "niche",
+        "deep"
+      ],
+      "tags": [
+        "art",
+        "history",
+        "public-domain"
+      ],
+      "added": "2026-04-23"
+    },
+    {
+      "id": "low-tech-magazine",
+      "name": "Low-Tech Magazine (solar)",
+      "url": "https://solar.lowtechmagazine.com/",
+      "description": "A solar-powered website about sustainable, low-energy tech. Goes offline when the sun doesn't shine.",
+      "facets": [
+        "niche",
+        "kitsch"
+      ],
+      "tags": [
+        "sustainability",
+        "essays"
+      ],
+      "added": "2026-04-23"
+    },
+    {
+      "id": "atlas-obscura",
+      "name": "Atlas Obscura",
+      "url": "https://www.atlasobscura.com/",
+      "description": "A crowd-sourced catalogue of the world's wonders, curiosities and hidden places.",
+      "facets": [
+        "obscure",
+        "broad"
+      ],
+      "tags": [
+        "travel",
+        "reference",
+        "curio"
+      ],
+      "added": "2026-04-23"
+    },
+    {
+      "id": "gwern",
+      "name": "Gwern.net",
+      "url": "https://gwern.net/",
+      "description": "Exhaustive long-form essays on psychology, statistics, AI and the obscure — heavily cited and endlessly deep.",
+      "facets": [
+        "deep",
+        "niche"
+      ],
+      "tags": [
+        "essays",
+        "research"
+      ],
+      "added": "2026-04-16"
+    },
+    {
+      "id": "connected-papers",
+      "name": "Connected Papers",
+      "url": "https://www.connectedpapers.com/",
+      "description": "Enter one paper and get a visual graph of the works around it. A map for a literature review.",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "tags": [
+        "science",
+        "papers",
+        "tools"
+      ],
+      "added": "2026-04-16"
+    },
+    {
+      "id": "ciechanowski",
+      "name": "Bartosz Ciechanowski",
+      "url": "https://ciechanow.ski/",
+      "description": "Interactive explainers of how things work — GPS, gears, light, sound — with hand-built simulations you can drag.",
+      "facets": [
+        "deep",
+        "niche"
+      ],
+      "tags": [
+        "explainer",
+        "interactive",
+        "science"
+      ],
+      "added": "2026-04-16"
+    },
+    {
+      "id": "arxiv",
+      "name": "arXiv",
+      "url": "https://arxiv.org/",
+      "description": "Open-access preprints across physics, math, CS, biology and more — research before it hits a journal.",
+      "facets": [
+        "deep",
+        "broad"
+      ],
+      "tags": [
+        "science",
+        "papers",
+        "reference"
+      ],
+      "added": "2026-04-09"
+    },
+    {
+      "id": "library-of-babel",
+      "name": "The Library of Babel",
+      "url": "https://libraryofbabel.info/",
+      "description": "Every possible page of text that could ever be written, generated on demand. A Borges story made browsable.",
+      "facets": [
+        "obscure",
+        "kitsch"
+      ],
+      "tags": [
+        "art",
+        "curio"
+      ],
+      "added": "2026-04-09"
+    },
+    {
+      "id": "oeis",
+      "name": "OEIS — Encyclopedia of Integer Sequences",
+      "url": "https://oeis.org/",
+      "description": "Paste in a number sequence and find out what it is. 370,000+ sequences with references and code.",
+      "facets": [
+        "niche",
+        "deep",
+        "narrow"
+      ],
+      "tags": [
+        "math",
+        "reference",
+        "lookup"
+      ],
+      "added": "2026-04-09"
+    },
+    {
+      "id": "wiby",
+      "name": "Wiby",
+      "url": "https://wiby.me/",
+      "description": "A search engine that surfaces classic, simple personal websites. Hit 'surprise me' for a random one.",
+      "facets": [
+        "obscure",
+        "kitsch"
+      ],
+      "tags": [
+        "search",
+        "small-web"
+      ],
+      "added": "2026-04-02"
+    },
+    {
+      "id": "wayback-machine",
+      "name": "Wayback Machine",
+      "url": "https://web.archive.org/",
+      "description": "See any page as it looked on a given date. Indispensable for dead links and vanished sources.",
+      "facets": [
+        "broad",
+        "narrow"
+      ],
+      "tags": [
+        "archive",
+        "tools"
+      ],
+      "added": "2026-04-02"
+    },
+    {
+      "id": "project-gutenberg",
+      "name": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/",
+      "description": "70,000+ free ebooks whose copyright has expired in the US. The original digital library.",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "tags": [
+        "books",
+        "library",
+        "public-domain"
+      ],
+      "added": "2026-04-02"
+    },
+    {
+      "id": "marginalia-search",
+      "name": "Marginalia Search",
+      "url": "https://search.marginalia.nu/",
+      "description": "An independent search engine that favors text-heavy, non-commercial pages — the old web you can't find on Google.",
+      "facets": [
+        "obscure",
+        "broad"
+      ],
+      "tags": [
+        "search",
+        "small-web"
+      ],
+      "added": "2026-04-02"
+    },
+    {
+      "id": "internet-archive",
+      "name": "Internet Archive",
+      "url": "https://archive.org/",
+      "description": "Books, music, software, films and the Wayback Machine. A non-profit library of millions of free items.",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "tags": [
+        "archive",
+        "reference",
+        "library"
+      ],
+      "added": "2026-04-02"
+    }
+  ]
+}

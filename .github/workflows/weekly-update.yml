@@ -1,0 +1,48 @@
+name: Weekly update
+
+# The once-a-week routine: validate the database, refresh derived data and the
+# "new finds" digest, run a best-effort link check, commit anything that
+# changed, and trigger a redeploy.
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Mondays 09:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-update
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate database
+        run: python scripts/validate.py
+
+      - name: Rebuild stats, digest and README
+        run: python scripts/build.py
+
+      - name: Link check (best effort)
+        continue-on-error: true
+        run: python scripts/linkcheck.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: weekly database refresh"
+            git push
+          fi
