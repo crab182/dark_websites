@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-16",
+  "generated": "2026-06-22",
   "window_days": 14,
   "sites": [
     {
@@ -61,36 +61,6 @@
         "broad"
       ],
       "description": "A huge collaborative database of Creative Commons sound clips — field recordings, effects, loops."
-    },
-    {
-      "name": "RefSeek",
-      "url": "https://www.refseek.com/",
-      "added": "2026-06-04",
-      "facets": [
-        "broad",
-        "deep"
-      ],
-      "description": "An academic search engine for students and researchers, indexing documents, encyclopedias and journals."
-    },
-    {
-      "name": "Neocities",
-      "url": "https://neocities.org/",
-      "added": "2026-06-04",
-      "facets": [
-        "kitsch",
-        "obscure"
-      ],
-      "description": "Free static web hosting reviving the spirit of GeoCities. Browse a directory of hand-made personal sites."
-    },
-    {
-      "name": "BASE",
-      "url": "https://www.base-search.net/",
-      "added": "2026-06-04",
-      "facets": [
-        "deep",
-        "broad"
-      ],
-      "description": "Bielefeld Academic Search Engine — one of the largest indexes of open-access scholarly material on the web."
     }
   ]
 }
