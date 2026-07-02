@@ -35,6 +35,19 @@ git config user.email >/dev/null 2>&1 || \
 
 echo "== dark_websites weekly routine ($(date -u +%Y-%m-%dT%H:%M:%SZ)) =="
 
+# Sync with the remote first so a long-lived clone doesn't fall behind and
+# get a non-fast-forward rejection at push time. Skipped when PUSH=0 so the
+# routine still works fully offline for local-only use.
+if [ "$PUSH" = "1" ]; then
+    echo "-- sync with origin/$BRANCH"
+    git fetch origin "$BRANCH"
+    if ! git merge --ff-only "origin/$BRANCH"; then
+        echo "ERROR: local '$BRANCH' has diverged from origin/$BRANCH." >&2
+        echo "       Reconcile by hand (e.g. git rebase origin/$BRANCH), then re-run." >&2
+        exit 1
+    fi
+fi
+
 echo "-- validate"
 python3 scripts/validate.py
 
