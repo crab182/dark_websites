@@ -28,6 +28,14 @@ if [ "$CURRENT" != "$BRANCH" ]; then
     exit 1
 fi
 
+# Refuse to run over uncommitted local edits: they would otherwise end up
+# inside the routine's refresh commit. Fail loudly and let a human sort it out.
+if [ -n "$(git status --porcelain)" ]; then
+    echo "ERROR: working tree is not clean; commit or stash local changes first:" >&2
+    git status --short >&2
+    exit 1
+fi
+
 # Cron often has no git identity configured; fall back so the commit succeeds.
 GIT_ID=""
 git config user.email >/dev/null 2>&1 || \
@@ -57,7 +65,9 @@ python3 scripts/build.py
 echo "-- link check (best effort)"
 python3 scripts/linkcheck.py || echo "linkcheck reported problems (non-blocking); see data/linkcheck.json"
 
-git add -A
+# Stage only what the routine itself generates — never a blanket add -A, so
+# nothing unrelated can ride along even if files change mid-run.
+git add data/ feed.xml FINDS.md README.md
 if git diff --cached --quiet; then
     echo "-- no new changes to commit."
 else
