@@ -16,7 +16,22 @@ set -eu
 cd "$(dirname "$0")/.."
 
 PUSH="${PUSH:-1}"
-BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+# The branch the routine is allowed to refresh. Guards against a persistent
+# clone accidentally left on a feature branch: the run fails loudly instead of
+# silently updating the wrong branch. Override with BRANCH=... if you really
+# mean to refresh something else.
+BRANCH="${BRANCH:-main}"
+CURRENT="$(git rev-parse --abbrev-ref HEAD)"
+if [ "$CURRENT" != "$BRANCH" ]; then
+    echo "ERROR: clone is on '$CURRENT' but the routine targets '$BRANCH'." >&2
+    echo "       git checkout $BRANCH   (or set BRANCH=$CURRENT to override)" >&2
+    exit 1
+fi
+
+# Cron often has no git identity configured; fall back so the commit succeeds.
+GIT_ID=""
+git config user.email >/dev/null 2>&1 || \
+    GIT_ID="-c user.name=dark_websites-weekly -c user.email=weekly@localhost"
 
 echo "== dark_websites weekly routine ($(date -u +%Y-%m-%dT%H:%M:%SZ)) =="
 
@@ -29,14 +44,15 @@ python3 scripts/build.py
 echo "-- link check (best effort)"
 python3 scripts/linkcheck.py || echo "linkcheck reported problems (non-blocking); see data/linkcheck.json"
 
-if git diff --quiet && git diff --cached --quiet; then
+git add -A
+if git diff --cached --quiet; then
     echo "-- no changes; done."
     exit 0
 fi
 
 echo "-- commit"
-git add -A
-git commit -m "chore: weekly database refresh"
+# shellcheck disable=SC2086  # GIT_ID intentionally word-splits into -c flags
+git $GIT_ID commit -m "chore: weekly database refresh"
 
 if [ "$PUSH" = "1" ]; then
     echo "-- push to origin/$BRANCH"
