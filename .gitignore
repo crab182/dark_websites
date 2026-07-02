@@ -3,3 +3,6 @@ __pycache__/
 .DS_Store
 .venv/
 node_modules/
+# cron output from scripts/weekly.sh (see README) — never commit it
+weekly.log
+*.log
