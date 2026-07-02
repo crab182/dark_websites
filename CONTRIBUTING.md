@@ -1,7 +1,11 @@
 # Contributing a find
 
-The database is one file: [`data/sites.json`](data/sites.json). To suggest a
-site, add an entry to the `sites` array.
+Two ways to suggest a site:
+
+- **No PR:** open the [Suggest a site](https://github.com/crab182/dark_websites/issues/new?template=suggest-a-site.yml)
+  issue form and fill in the fields — a maintainer adds it.
+- **By PR:** the database is one file, [`data/sites.json`](data/sites.json); add
+  an entry to the `sites` array as described below.
 
 ## Entry format
 

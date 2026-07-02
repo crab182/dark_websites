@@ -1,7 +1,7 @@
 {
   "version": 1,
   "title": "dark_websites — a reference database of the useful, lesser-known web",
-  "updated": "2026-06-29",
+  "updated": "2026-07-02",
   "facets": {
     "obscure": "Hidden corners most people never reach — independent search, the small web, the strange-but-real.",
     "niche": "Built for one community or craft; narrow audience, high signal.",
@@ -11,6 +11,101 @@
     "narrow": "Does one job and does it well — a single sharp tool or lookup."
   },
   "sites": [
+    {
+      "id": "somafm",
+      "name": "SomaFM",
+      "url": "https://somafm.com/",
+      "description": "Listener-supported, commercial-free internet radio with dozens of hand-curated channels.",
+      "facets": [
+        "niche"
+      ],
+      "tags": [
+        "radio",
+        "audio",
+        "music"
+      ],
+      "added": "2026-07-02"
+    },
+    {
+      "id": "rosettacode",
+      "name": "Rosetta Code",
+      "url": "https://rosettacode.org/",
+      "description": "The same programming task solved side by side in hundreds of languages. A comparative reference.",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "tags": [
+        "dev",
+        "programming",
+        "reference"
+      ],
+      "added": "2026-07-02"
+    },
+    {
+      "id": "radio-garden",
+      "name": "Radio Garden",
+      "url": "https://radio.garden/",
+      "description": "Spin a globe and drop into any live local radio station on Earth. Wonderfully meditative.",
+      "facets": [
+        "kitsch",
+        "niche"
+      ],
+      "tags": [
+        "radio",
+        "audio",
+        "maps"
+      ],
+      "added": "2026-07-02"
+    },
+    {
+      "id": "poetry-foundation",
+      "name": "Poetry Foundation",
+      "url": "https://www.poetryfoundation.org/",
+      "description": "A vast, searchable archive of poems and poets, plus essays and a daily poem.",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "tags": [
+        "poetry",
+        "literature",
+        "reference"
+      ],
+      "added": "2026-07-02"
+    },
+    {
+      "id": "openverse",
+      "name": "Openverse",
+      "url": "https://openverse.org/",
+      "description": "Search across hundreds of millions of openly-licensed images and audio you can reuse freely.",
+      "facets": [
+        "broad",
+        "narrow"
+      ],
+      "tags": [
+        "search",
+        "creative-commons",
+        "images"
+      ],
+      "added": "2026-07-02"
+    },
+    {
+      "id": "oldmapsonline",
+      "name": "Old Maps Online",
+      "url": "https://www.oldmapsonline.org/",
+      "description": "Search historical maps from libraries worldwide by place and time. A gateway to cartographic archives.",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "tags": [
+        "maps",
+        "history",
+        "archive"
+      ],
+      "added": "2026-07-02"
+    },
     {
       "id": "are-na",
       "name": "Are.na",
