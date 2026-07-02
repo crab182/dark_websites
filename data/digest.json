@@ -1,26 +1,65 @@
 {
-  "generated": "2026-06-29",
+  "generated": "2026-07-02",
   "window_days": 14,
   "sites": [
     {
-      "name": "Are.na",
-      "url": "https://www.are.na/",
-      "added": "2026-06-16",
+      "name": "SomaFM",
+      "url": "https://somafm.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche"
+      ],
+      "description": "Listener-supported, commercial-free internet radio with dozens of hand-curated channels."
+    },
+    {
+      "name": "Rosetta Code",
+      "url": "https://rosettacode.org/",
+      "added": "2026-07-02",
       "facets": [
         "niche",
         "deep"
       ],
-      "description": "A calm, ad-free tool for collecting and connecting ideas, images and links into visual research channels."
+      "description": "The same programming task solved side by side in hundreds of languages. A comparative reference."
     },
     {
-      "name": "Open Library",
-      "url": "https://openlibrary.org/",
-      "added": "2026-06-15",
+      "name": "Radio Garden",
+      "url": "https://radio.garden/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch",
+        "niche"
+      ],
+      "description": "Spin a globe and drop into any live local radio station on Earth. Wonderfully meditative."
+    },
+    {
+      "name": "Poetry Foundation",
+      "url": "https://www.poetryfoundation.org/",
+      "added": "2026-07-02",
       "facets": [
         "broad",
         "deep"
       ],
-      "description": "An open, editable catalogue aiming for one web page per book ever published, with many free to borrow."
+      "description": "A vast, searchable archive of poems and poets, plus essays and a daily poem."
+    },
+    {
+      "name": "Openverse",
+      "url": "https://openverse.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "broad",
+        "narrow"
+      ],
+      "description": "Search across hundreds of millions of openly-licensed images and audio you can reuse freely."
+    },
+    {
+      "name": "Old Maps Online",
+      "url": "https://www.oldmapsonline.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "description": "Search historical maps from libraries worldwide by place and time. A gateway to cartographic archives."
     }
   ]
 }

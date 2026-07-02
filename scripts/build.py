@@ -8,6 +8,8 @@ Run by the weekly routine (and safe to run by hand). It:
   * writes data/digest.json — the sites added in the last `NEW_WINDOW_DAYS`
     days, which is what "showcase new finds" draws from,
   * prepends a dated entry to FINDS.md when there are new finds,
+  * writes feed.xml — an Atom feed of the most recent additions so people
+    can subscribe to new finds,
   * refreshes the stats block in README.md between the marker comments.
 
 Standard library only.
@@ -18,15 +20,19 @@ import datetime as dt
 import json
 import pathlib
 from collections import Counter
+from xml.sax.saxutils import escape
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "sites.json"
 STATS = ROOT / "data" / "stats.json"
 DIGEST = ROOT / "data" / "digest.json"
+FEED = ROOT / "feed.xml"
 FINDS = ROOT / "FINDS.md"
 README = ROOT / "README.md"
 
 NEW_WINDOW_DAYS = 14  # how recent counts as a "new find" in the showcase
+FEED_LIMIT = 25  # most recent additions to include in the Atom feed
+SITE_URL = "https://crab182.github.io/dark_websites/"
 README_START = "<!-- STATS:START -->"
 README_END = "<!-- STATS:END -->"
 
@@ -111,6 +117,39 @@ def update_finds_log(digest: dict, today: dt.date) -> None:
     FINDS.write_text(FINDS_HEADER + section + body, encoding="utf-8")
 
 
+def build_feed(doc: dict, today: dt.date) -> str:
+    """An Atom feed of the most recent additions (newest first)."""
+    recent = sort_sites(list(doc["sites"]))[:FEED_LIMIT]
+    updated = f"{today.isoformat()}T00:00:00Z"
+    parts = [
+        '<?xml version="1.0" encoding="utf-8"?>',
+        '<feed xmlns="http://www.w3.org/2005/Atom">',
+        f"  <title>{escape(doc.get('title', 'dark_websites'))}</title>",
+        f"  <subtitle>New finds from the dark_websites reference database.</subtitle>",
+        f'  <link href="{SITE_URL}" rel="alternate"/>',
+        f'  <link href="{SITE_URL}feed.xml" rel="self"/>',
+        f"  <id>{SITE_URL}</id>",
+        f"  <updated>{updated}</updated>",
+    ]
+    for s in recent:
+        added = f"{s['added']}T00:00:00Z"
+        facets = ", ".join(s["facets"])
+        summary = f"{s['description']} ({facets})"
+        parts += [
+            "  <entry>",
+            f"    <title>{escape(s['name'])}</title>",
+            f'    <link href="{escape(s["url"])}" rel="alternate"/>',
+            f"    <id>tag:dark_websites,{s['added'][:4]}:{escape(s['id'])}</id>",
+            f"    <updated>{added}</updated>",
+            f"    <published>{added}</published>",
+            "".join(f"    <category term=\"{escape(f)}\"/>" for f in s["facets"]),
+            f"    <summary>{escape(summary)}</summary>",
+            "  </entry>",
+        ]
+    parts.append("</feed>")
+    return "\n".join(p for p in parts if p) + "\n"
+
+
 def update_readme(stats: dict) -> None:
     if not README.exists():
         return
@@ -144,12 +183,14 @@ def main() -> int:
     digest = build_digest(doc, today)
     DIGEST.write_text(json.dumps(digest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
+    FEED.write_text(build_feed(doc, today), encoding="utf-8")
+
     update_finds_log(digest, today)
     update_readme(stats)
 
     print(
         f"Built: {stats['total']} sites, {stats['new_count']} new "
-        f"(last {NEW_WINDOW_DAYS}d). Wrote stats.json, digest.json."
+        f"(last {NEW_WINDOW_DAYS}d). Wrote stats.json, digest.json, feed.xml."
     )
     return 0
 

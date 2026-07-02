@@ -8,8 +8,22 @@
   --accent: #7aa2f7;
   --accent-2: #bb9af7;
   --new: #9ece6a;
+  --star: #f7c948;
   --radius: 12px;
   --maxw: 1100px;
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f8fb;
+  --bg-soft: #eef1f6;
+  --bg-card: #ffffff;
+  --border: #dce1ea;
+  --text: #1a1f2b;
+  --muted: #5c6478;
+  --accent: #3b5bdb;
+  --accent-2: #7048e8;
+  --new: #2f9e44;
+  --star: #d9a300;
 }
 
 * { box-sizing: border-box; }
@@ -31,9 +45,10 @@ a:hover { text-decoration: underline; }
 
 header.site {
   border-bottom: 1px solid var(--border);
-  background: linear-gradient(180deg, #11141d, var(--bg));
-  padding: 40px 0 28px;
+  background: linear-gradient(180deg, var(--bg-soft), var(--bg));
+  padding: 32px 0 28px;
 }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 header.site h1 {
   margin: 0 0 6px;
   font-size: 1.9rem;
@@ -44,10 +59,22 @@ header.site p.tag { margin: 0; color: var(--muted); max-width: 60ch; }
 .meta { margin-top: 14px; font-size: 0.85rem; color: var(--muted); }
 .meta strong { color: var(--text); }
 
+.iconbtn {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 10px;
+  width: 40px; height: 40px;
+  font-size: 1.15rem;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.iconbtn:hover { border-color: var(--accent); }
+
 /* Controls */
 .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 24px 0 8px; }
 .search {
-  flex: 1 1 280px;
+  flex: 1 1 260px;
   display: flex;
   align-items: center;
   background: var(--bg-soft);
@@ -65,14 +92,16 @@ header.site p.tag { margin: 0; color: var(--muted); max-width: 60ch; }
   padding: 11px 8px;
 }
 .search .icon { color: var(--muted); }
-.select {
+.select, .btn {
   background: var(--bg-soft);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   color: var(--text);
-  padding: 10px 12px;
+  padding: 10px 14px;
   font-size: 0.9rem;
+  cursor: pointer;
 }
+.btn:hover, .select:hover { border-color: var(--accent); }
 
 /* Facet legend / filters */
 .facets { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 6px; }
@@ -89,7 +118,7 @@ header.site p.tag { margin: 0; color: var(--muted); max-width: 60ch; }
 }
 .chip:hover { color: var(--text); border-color: var(--accent); }
 .chip[aria-pressed="true"] {
-  color: #0d0f14;
+  color: var(--bg);
   background: var(--accent);
   border-color: var(--accent);
   font-weight: 600;
@@ -101,12 +130,16 @@ header.site p.tag { margin: 0; color: var(--muted); max-width: 60ch; }
 .tagbar .chip { padding: 4px 10px; font-size: 0.78rem; border-radius: 8px; }
 .tagbar .chip[aria-pressed="true"] { background: var(--accent-2); border-color: var(--accent-2); }
 
-.resultbar { display: flex; justify-content: space-between; align-items: center; margin: 18px 0 10px; color: var(--muted); font-size: 0.88rem; }
+.resultbar { display: flex; justify-content: space-between; align-items: center; margin: 18px 0 10px; color: var(--muted); font-size: 0.88rem; gap: 12px; }
+.resultbar .right { display: flex; align-items: center; gap: 12px; }
+.toggle { background: var(--bg-soft); border: 1px solid var(--border); color: var(--muted); border-radius: 8px; padding: 5px 11px; cursor: pointer; font-size: 0.82rem; }
+.toggle:hover { border-color: var(--star); color: var(--text); }
+.toggle[aria-pressed="true"] { color: var(--bg); background: var(--star); border-color: var(--star); font-weight: 600; }
 .clear { background: none; border: 0; color: var(--accent); cursor: pointer; font-size: 0.85rem; }
 .clear:hover { text-decoration: underline; }
 
 /* New finds showcase */
-.showcase { margin: 22px 0 8px; padding: 18px; background: linear-gradient(135deg, #141a14, #141821); border: 1px solid #28381f; border-radius: var(--radius); }
+.showcase { margin: 22px 0 8px; padding: 18px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); }
 .showcase h2 { margin: 0 0 4px; font-size: 1.05rem; color: var(--new); }
 .showcase p.sub { margin: 0 0 14px; color: var(--muted); font-size: 0.85rem; }
 .showcase .row { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 4px; }
@@ -127,20 +160,25 @@ header.site p.tag { margin: 0; color: var(--muted); max-width: 60ch; }
   transition: border-color 0.12s ease, transform 0.12s ease;
 }
 .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-.card h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.card h3 { margin: 0 40px 4px 0; font-size: 1.05rem; }
 .card h3 a { color: var(--text); }
 .card h3 a:hover { color: var(--accent); }
 .card .url { font-size: 0.78rem; color: var(--muted); word-break: break-all; margin-bottom: 8px; }
-.card .desc { font-size: 0.9rem; color: #c7ccda; flex: 1; }
+.card .desc { font-size: 0.9rem; color: var(--text); opacity: 0.92; flex: 1; }
 .card .foot { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .card .badge { font-size: 0.72rem; padding: 2px 8px; border-radius: 6px; background: var(--bg-soft); border: 1px solid var(--border); color: var(--muted); }
-.card .badge.facet { color: var(--accent); border-color: #2a3550; }
-.card .new-flag { position: absolute; top: 12px; right: 12px; font-size: 0.68rem; font-weight: 700; color: #0d0f14; background: var(--new); padding: 2px 7px; border-radius: 6px; letter-spacing: 0.03em; }
+.card .badge.facet { color: var(--accent); border-color: var(--border); }
+.card .new-flag { position: absolute; top: 12px; right: 44px; font-size: 0.68rem; font-weight: 700; color: var(--bg); background: var(--new); padding: 2px 7px; border-radius: 6px; letter-spacing: 0.03em; }
+.card .fav { position: absolute; top: 10px; right: 10px; background: none; border: 0; cursor: pointer; font-size: 1.15rem; line-height: 1; color: var(--border); padding: 2px; }
+.card .fav:hover { color: var(--star); }
+.card .fav[aria-pressed="true"] { color: var(--star); }
 
 .empty { text-align: center; color: var(--muted); padding: 60px 0; }
 
 footer.site { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; padding: 24px 0 50px; }
 footer.site a { color: var(--accent); }
+footer.site .keys { margin-top: 8px; font-size: 0.8rem; }
+kbd { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; font-size: 0.78rem; }
 
 @media (max-width: 560px) {
   header.site h1 { font-size: 1.5rem; }

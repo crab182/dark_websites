@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>dark_websites — a reference database of the useful, lesser-known web</title>
+  <subtitle>New finds from the dark_websites reference database.</subtitle>
+  <link href="https://crab182.github.io/dark_websites/" rel="alternate"/>
+  <link href="https://crab182.github.io/dark_websites/feed.xml" rel="self"/>
+  <id>https://crab182.github.io/dark_websites/</id>
+  <updated>2026-07-02T00:00:00Z</updated>
+  <entry>
+    <title>SomaFM</title>
+    <link href="https://somafm.com/" rel="alternate"/>
+    <id>tag:dark_websites,2026:somafm</id>
+    <updated>2026-07-02T00:00:00Z</updated>
+    <published>2026-07-02T00:00:00Z</published>
+    <category term="niche"/>
+    <summary>Listener-supported, commercial-free internet radio with dozens of hand-curated channels. (niche)</summary>
+  </entry>
+  <entry>
+    <title>Rosetta Code</title>
+    <link href="https://rosettacode.org/" rel="alternate"/>
+    <id>tag:dark_websites,2026:rosettacode</id>
+    <updated>2026-07-02T00:00:00Z</updated>
+    <published>2026-07-02T00:00:00Z</published>
+    <category term="niche"/>    <category term="deep"/>
+    <summary>The same programming task solved side by side in hundreds of languages. A comparative reference. (niche, deep)</summary>
+  </entry>
+  <entry>
+    <title>Radio Garden</title>
+    <link href="https://radio.garden/" rel="alternate"/>
+    <id>tag:dark_websites,2026:radio-garden</id>
+    <updated>2026-07-02T00:00:00Z</updated>
+    <published>2026-07-02T00:00:00Z</published>
+    <category term="kitsch"/>    <category term="niche"/>
+    <summary>Spin a globe and drop into any live local radio station on Earth. Wonderfully meditative. (kitsch, niche)</summary>
+  </entry>
+  <entry>
+    <title>Poetry Foundation</title>
+    <link href="https://www.poetryfoundation.org/" rel="alternate"/>
+    <id>tag:dark_websites,2026:poetry-foundation</id>
+    <updated>2026-07-02T00:00:00Z</updated>
+    <published>2026-07-02T00:00:00Z</published>
+    <category term="broad"/>    <category term="deep"/>
+    <summary>A vast, searchable archive of poems and poets, plus essays and a daily poem. (broad, deep)</summary>
+  </entry>
+  <entry>
+    <title>Openverse</title>
+    <link href="https://openverse.org/" rel="alternate"/>
+    <id>tag:dark_websites,2026:openverse</id>
+    <updated>2026-07-02T00:00:00Z</updated>
+    <published>2026-07-02T00:00:00Z</published>
+    <category term="broad"/>    <category term="narrow"/>
+    <summary>Search across hundreds of millions of openly-licensed images and audio you can reuse freely. (broad, narrow)</summary>
+  </entry>
+  <entry>
+    <title>Old Maps Online</title>
+    <link href="https://www.oldmapsonline.org/" rel="alternate"/>
+    <id>tag:dark_websites,2026:oldmapsonline</id>
+    <updated>2026-07-02T00:00:00Z</updated>
+    <published>2026-07-02T00:00:00Z</published>
+    <category term="niche"/>    <category term="deep"/>
+    <summary>Search historical maps from libraries worldwide by place and time. A gateway to cartographic archives. (niche, deep)</summary>
+  </entry>
+  <entry>
+    <title>Are.na</title>
+    <link href="https://www.are.na/" rel="alternate"/>
+    <id>tag:dark_websites,2026:are-na</id>
+    <updated>2026-06-16T00:00:00Z</updated>
+    <published>2026-06-16T00:00:00Z</published>
+    <category term="niche"/>    <category term="deep"/>
+    <summary>A calm, ad-free tool for collecting and connecting ideas, images and links into visual research channels. (niche, deep)</summary>
+  </entry>
+  <entry>
+    <title>Open Library</title>
+    <link href="https://openlibrary.org/" rel="alternate"/>
+    <id>tag:dark_websites,2026:openlibrary</id>
+    <updated>2026-06-15T00:00:00Z</updated>
+    <published>2026-06-15T00:00:00Z</published>
+    <category term="broad"/>    <category term="deep"/>
+    <summary>An open, editable catalogue aiming for one web page per book ever published, with many free to borrow. (broad, deep)</summary>
+  </entry>
+  <entry>
+    <title>Kagi Small Web</title>
+    <link href="https://kagi.com/smallweb/" rel="alternate"/>
+    <id>tag:dark_websites,2026:kagi-smallweb</id>
+    <updated>2026-06-14T00:00:00Z</updated>
+    <published>2026-06-14T00:00:00Z</published>
+    <category term="obscure"/>    <category term="niche"/>
+    <summary>A live stream of fresh posts from independent blogs and personal sites — the non-algorithmic web. (obscure, niche)</summary>
+  </entry>
+  <entry>
+    <title>1MB Club</title>
+    <link href="https://1mb.club/" rel="alternate"/>
+    <id>tag:dark_websites,2026:1mb-club</id>
+    <updated>2026-06-12T00:00:00Z</updated>
+    <published>2026-06-12T00:00:00Z</published>
+    <category term="niche"/>    <category term="kitsch"/>
+    <summary>A directory of websites that weigh less than one megabyte — a quiet protest against the bloated web. (niche, kitsch)</summary>
+  </entry>
+  <entry>
+    <title>Wikenigma</title>
+    <link href="https://wikenigma.org.uk/" rel="alternate"/>
+    <id>tag:dark_websites,2026:wikenigma</id>
+    <updated>2026-06-09T00:00:00Z</updated>
+    <published>2026-06-09T00:00:00Z</published>
+    <category term="obscure"/>    <category term="niche"/>
+    <summary>An encyclopedia of the unknown — a catalogue of gaps in human knowledge and unanswered questions. (obscure, niche)</summary>
+  </entry>
+  <entry>
+    <title>Freesound</title>
+    <link href="https://freesound.org/" rel="alternate"/>
+    <id>tag:dark_websites,2026:freesound</id>
+    <updated>2026-06-09T00:00:00Z</updated>
+    <published>2026-06-09T00:00:00Z</published>
+    <category term="niche"/>    <category term="broad"/>
+    <summary>A huge collaborative database of Creative Commons sound clips — field recordings, effects, loops. (niche, broad)</summary>
+  </entry>
+  <entry>
+    <title>RefSeek</title>
+    <link href="https://www.refseek.com/" rel="alternate"/>
+    <id>tag:dark_websites,2026:refseek</id>
+    <updated>2026-06-04T00:00:00Z</updated>
+    <published>2026-06-04T00:00:00Z</published>
+    <category term="broad"/>    <category term="deep"/>
+    <summary>An academic search engine for students and researchers, indexing documents, encyclopedias and journals. (broad, deep)</summary>
+  </entry>
+  <entry>
+    <title>Neocities</title>
+    <link href="https://neocities.org/" rel="alternate"/>
+    <id>tag:dark_websites,2026:neocities</id>
+    <updated>2026-06-04T00:00:00Z</updated>
+    <published>2026-06-04T00:00:00Z</published>
+    <category term="kitsch"/>    <category term="obscure"/>
+    <summary>Free static web hosting reviving the spirit of GeoCities. Browse a directory of hand-made personal sites. (kitsch, obscure)</summary>
+  </entry>
+  <entry>
+    <title>BASE</title>
+    <link href="https://www.base-search.net/" rel="alternate"/>
+    <id>tag:dark_websites,2026:base-search</id>
+    <updated>2026-06-04T00:00:00Z</updated>
+    <published>2026-06-04T00:00:00Z</published>
+    <category term="deep"/>    <category term="broad"/>
+    <summary>Bielefeld Academic Search Engine — one of the largest indexes of open-access scholarly material on the web. (deep, broad)</summary>
+  </entry>
+  <entry>
+    <title>neal.fun</title>
+    <link href="https://neal.fun/" rel="alternate"/>
+    <id>tag:dark_websites,2026:neal-fun</id>
+    <updated>2026-05-28T00:00:00Z</updated>
+    <published>2026-05-28T00:00:00Z</published>
+    <category term="kitsch"/>    <category term="niche"/>
+    <summary>A collection of playful interactive toys and visual experiments — 'The Size of Space', 'Deep Sea' and more. (kitsch, niche)</summary>
+  </entry>
+  <entry>
+    <title>The Pudding</title>
+    <link href="https://pudding.cool/" rel="alternate"/>
+    <id>tag:dark_websites,2026:pudding</id>
+    <updated>2026-05-28T00:00:00Z</updated>
+    <published>2026-05-28T00:00:00Z</published>
+    <category term="niche"/>    <category term="deep"/>
+    <summary>Visual essays that explain ideas debated in culture through data, animation and interaction. (niche, deep)</summary>
+  </entry>
+  <entry>
+    <title>Everything2</title>
+    <link href="https://everything2.com/" rel="alternate"/>
+    <id>tag:dark_websites,2026:everything2</id>
+    <updated>2026-05-28T00:00:00Z</updated>
+    <published>2026-05-28T00:00:00Z</published>
+    <category term="obscure"/>    <category term="kitsch"/>
+    <summary>A pre-Wikipedia collaborative writing community — part encyclopedia, part literary playground, still alive. (obscure, kitsch)</summary>
+  </entry>
+  <entry>
+    <title>TV Tropes</title>
+    <link href="https://tvtropes.org/" rel="alternate"/>
+    <id>tag:dark_websites,2026:tvtropes</id>
+    <updated>2026-05-21T00:00:00Z</updated>
+    <published>2026-05-21T00:00:00Z</published>
+    <category term="broad"/>    <category term="deep"/>    <category term="kitsch"/>
+    <summary>A vast, hyperlinked wiki cataloguing storytelling devices across every medium. Easy to lose an afternoon. (broad, deep, kitsch)</summary>
+  </entry>
+  <entry>
+    <title>DevDocs</title>
+    <link href="https://devdocs.io/" rel="alternate"/>
+    <id>tag:dark_websites,2026:devdocs</id>
+    <updated>2026-05-21T00:00:00Z</updated>
+    <published>2026-05-21T00:00:00Z</published>
+    <category term="broad"/>    <category term="deep"/>
+    <summary>Fast, searchable, offline-capable API documentation for hundreds of languages and libraries in one place. (broad, deep)</summary>
+  </entry>
+  <entry>
+    <title>Can I use</title>
+    <link href="https://caniuse.com/" rel="alternate"/>
+    <id>tag:dark_websites,2026:caniuse</id>
+    <updated>2026-05-21T00:00:00Z</updated>
+    <published>2026-05-21T00:00:00Z</published>
+    <category term="narrow"/>    <category term="niche"/>
+    <summary>Browser support tables for HTML, CSS and JS features. The reference for what's safe to ship. (narrow, niche)</summary>
+  </entry>
+  <entry>
+    <title>regex101</title>
+    <link href="https://regex101.com/" rel="alternate"/>
+    <id>tag:dark_websites,2026:regex101</id>
+    <updated>2026-05-14T00:00:00Z</updated>
+    <published>2026-05-14T00:00:00Z</published>
+    <category term="narrow"/>    <category term="broad"/>
+    <summary>Build and debug regular expressions with live highlighting and a plain-English explanation of each token. (narrow, broad)</summary>
+  </entry>
+  <entry>
+    <title>explainshell</title>
+    <link href="https://explainshell.com/" rel="alternate"/>
+    <id>tag:dark_websites,2026:explainshell</id>
+    <updated>2026-05-14T00:00:00Z</updated>
+    <published>2026-05-14T00:00:00Z</published>
+    <category term="narrow"/>    <category term="niche"/>
+    <summary>Paste a shell command and it annotates every flag and argument with the matching man-page text. (narrow, niche)</summary>
+  </entry>
+  <entry>
+    <title>CyberChef</title>
+    <link href="https://gchq.github.io/CyberChef/" rel="alternate"/>
+    <id>tag:dark_websites,2026:cyberchef</id>
+    <updated>2026-05-14T00:00:00Z</updated>
+    <published>2026-05-14T00:00:00Z</published>
+    <category term="narrow"/>    <category term="deep"/>
+    <summary>The 'cyber swiss-army knife' — encode, decode, encrypt, parse and analyze data by stacking operations. (narrow, deep)</summary>
+  </entry>
+  <entry>
+    <title>Shapecatcher</title>
+    <link href="https://shapecatcher.com/" rel="alternate"/>
+    <id>tag:dark_websites,2026:shapecatcher</id>
+    <updated>2026-05-07T00:00:00Z</updated>
+    <published>2026-05-07T00:00:00Z</published>
+    <category term="narrow"/>    <category term="niche"/>
+    <summary>Draw a symbol with your mouse and it finds the matching Unicode character. (narrow, niche)</summary>
+  </entry>
+</feed>

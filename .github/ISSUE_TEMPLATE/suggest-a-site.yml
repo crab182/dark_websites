@@ -1,0 +1,59 @@
+name: Suggest a site
+description: Propose a new find for the reference database
+title: "[site] "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a find! Entries should be **legitimate, public**
+        websites from the useful, lesser-known web. The mainstream destinations
+        everyone already knows are out of scope on purpose.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: Marginalia Search
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: https://search.marginalia.nu/
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: One or two sentences — what it is and why it's worth a visit.
+    validations:
+      required: true
+  - type: checkboxes
+    id: facets
+    attributes:
+      label: Facets
+      description: Pick every dimension that fits.
+      options:
+        - label: "obscure — hidden corners most people never reach"
+        - label: "niche — built for one community or craft"
+        - label: "kitsch — playful, retro, hand-made, or gloriously useless"
+        - label: "broad — wide coverage / general reference"
+        - label: "deep — long-form, scholarly, or exhaustive"
+        - label: "narrow — does one job and does it well"
+  - type: input
+    id: tags
+    attributes:
+      label: Tags (optional)
+      description: Comma-separated topical tags, lowercase and hyphenated.
+      placeholder: search, small-web
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirm
+      options:
+        - label: This is a legitimate, public website (nothing illicit or invite-walled).
+          required: true
+        - label: It isn't already in the database.
+          required: true
