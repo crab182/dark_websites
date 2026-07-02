@@ -3,6 +3,241 @@
   "window_days": 14,
   "sites": [
     {
+      "name": "xeno-canto",
+      "url": "https://xeno-canto.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "description": "A collaborative archive of hundreds of thousands of wildlife sound recordings from around the world."
+    },
+    {
+      "name": "tldr pages",
+      "url": "https://tldr.sh/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow",
+        "niche"
+      ],
+      "description": "Community-maintained cheat-sheets for console commands — the practical examples man pages forgot."
+    },
+    {
+      "name": "tilde.town",
+      "url": "https://tilde.town/",
+      "added": "2026-07-02",
+      "facets": [
+        "obscure",
+        "kitsch"
+      ],
+      "description": "A public unix server and gentle art community — hundreds of hand-made ~user pages on one shared computer."
+    },
+    {
+      "name": "textfiles.com",
+      "url": "http://textfiles.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "obscure",
+        "deep"
+      ],
+      "description": "Jason Scott's archive of tens of thousands of BBS-era text files — the writing culture of the pre-web internet."
+    },
+    {
+      "name": "ooh.directory",
+      "url": "https://ooh.directory/",
+      "added": "2026-07-02",
+      "facets": [
+        "obscure",
+        "broad"
+      ],
+      "description": "A browsable directory of thousands of personal blogs, sorted by topic and freshness. Blog discovery, solved."
+    },
+    {
+      "name": "oimo.io",
+      "url": "https://oimo.io/works",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch",
+        "niche"
+      ],
+      "description": "A collection of exquisitely engineered physics toys and simulations by a single Japanese developer."
+    },
+    {
+      "name": "iNaturalist",
+      "url": "https://www.inaturalist.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "broad"
+      ],
+      "description": "Photograph any living thing and a community of naturalists (plus a model) identifies it — citizen science at scale."
+    },
+    {
+      "name": "endless.horse",
+      "url": "https://endless.horse/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch"
+      ],
+      "description": "An ASCII horse whose legs scroll on forever. That's it. That's the site."
+    },
+    {
+      "name": "earth.nullschool.net",
+      "url": "https://earth.nullschool.net/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "description": "A hypnotic live visualization of global wind, ocean currents and weather on a spinnable planet."
+    },
+    {
+      "name": "eBird",
+      "url": "https://ebird.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "description": "Cornell's global birding database — live sightings, hotspot maps and migration data from millions of checklists."
+    },
+    {
+      "name": "crontab.guru",
+      "url": "https://crontab.guru/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow"
+      ],
+      "description": "Paste a cron expression and get it back in plain English. The quick reference for schedule syntax."
+    },
+    {
+      "name": "Zombo.com",
+      "url": "https://zombo.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch",
+        "obscure"
+      ],
+      "description": "The infinite promise of the year-2000 web, preserved. You can do anything at Zombo.com."
+    },
+    {
+      "name": "WorldCat",
+      "url": "https://search.worldcat.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "broad",
+        "narrow"
+      ],
+      "description": "Search the catalogs of tens of thousands of libraries worldwide and find which one near you holds the book."
+    },
+    {
+      "name": "Wolfram|Alpha",
+      "url": "https://www.wolframalpha.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "broad",
+        "narrow"
+      ],
+      "description": "A computational answer engine — ask it math, dates, units, nutrition or physics and get worked results."
+    },
+    {
+      "name": "Windows 93",
+      "url": "https://www.windows93.net/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch",
+        "obscure"
+      ],
+      "description": "A fully interactive parody operating system in your browser, packed with absurd apps and easter eggs."
+    },
+    {
+      "name": "VirusTotal",
+      "url": "https://www.virustotal.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow",
+        "deep"
+      ],
+      "description": "Scan a file or URL against dozens of antivirus engines at once. First stop for anything suspicious."
+    },
+    {
+      "name": "TinEye",
+      "url": "https://tineye.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow"
+      ],
+      "description": "Reverse image search that finds where a picture came from and how it's been modified."
+    },
+    {
+      "name": "Tildes",
+      "url": "https://tildes.net/",
+      "added": "2026-07-02",
+      "facets": [
+        "obscure",
+        "niche"
+      ],
+      "description": "A non-profit, ad-free link community engineered for depth of discussion over engagement."
+    },
+    {
+      "name": "The Useless Web",
+      "url": "https://theuselessweb.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch",
+        "narrow"
+      ],
+      "description": "One button that teleports you to a random gloriously pointless website. The web's best worst tour guide."
+    },
+    {
+      "name": "SunCalc",
+      "url": "https://www.suncalc.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow"
+      ],
+      "description": "Sun position, sunrise, shadows and golden hour for any spot on the map, any day of the year."
+    },
+    {
+      "name": "Stellarium Web",
+      "url": "https://stellarium-web.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow",
+        "niche"
+      ],
+      "description": "A planetarium in the browser — the night sky from your location, any time, any date."
+    },
+    {
+      "name": "Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/",
+      "added": "2026-07-02",
+      "facets": [
+        "deep",
+        "broad"
+      ],
+      "description": "The gold standard of free scholarly reference — peer-reviewed, constantly updated articles on all of philosophy."
+    },
+    {
+      "name": "Standard Ebooks",
+      "url": "https://standardebooks.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "description": "Public-domain classics re-typeset to modern professional standards, free in every format."
+    },
+    {
+      "name": "Squoosh",
+      "url": "https://squoosh.app/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow"
+      ],
+      "description": "Drag in an image, compare compression codecs side by side, and shrink it without shipping it to a server."
+    },
+    {
       "name": "SomaFM",
       "url": "https://somafm.com/",
       "added": "2026-07-02",
@@ -10,6 +245,76 @@
         "niche"
       ],
       "description": "Listener-supported, commercial-free internet radio with dozens of hand-curated channels."
+    },
+    {
+      "name": "Smithsonian Open Access",
+      "url": "https://www.si.edu/openaccess",
+      "added": "2026-07-02",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "description": "Millions of Smithsonian images and 3D models released CC0 — download, remix, reuse, no permission needed."
+    },
+    {
+      "name": "Shadertoy",
+      "url": "https://www.shadertoy.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "description": "Write and browse GPU shaders live in the browser — some of the most astonishing graphics code on the web."
+    },
+    {
+      "name": "Semantic Scholar",
+      "url": "https://www.semanticscholar.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "description": "AI-assisted academic search from AI2 — citation graphs, TLDRs and influence metrics across 200M+ papers."
+    },
+    {
+      "name": "Search My Site",
+      "url": "https://searchmysite.net/",
+      "added": "2026-07-02",
+      "facets": [
+        "obscure",
+        "niche"
+      ],
+      "description": "A search engine that only indexes user-submitted personal and independent websites. Zero ads, zero SEO spam."
+    },
+    {
+      "name": "Sandspiel",
+      "url": "https://sandspiel.club/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch",
+        "niche"
+      ],
+      "description": "A beautiful falling-sand game — pour water, grow plants, set fires, and share your little worlds."
+    },
+    {
+      "name": "SS64",
+      "url": "https://ss64.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow",
+        "deep"
+      ],
+      "description": "A quietly comprehensive command-line reference covering bash, PowerShell, cmd, macOS and more."
+    },
+    {
+      "name": "SDF Public Access UNIX",
+      "url": "https://sdf.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "obscure",
+        "niche"
+      ],
+      "description": "A free public-access UNIX system running since 1987 — shell accounts, gopher, and a living piece of net history."
     },
     {
       "name": "Rosetta Code",
@@ -32,6 +337,36 @@
       "description": "Spin a globe and drop into any live local radio station on Earth. Wonderfully meditative."
     },
     {
+      "name": "Project Euler",
+      "url": "https://projecteuler.net/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "description": "Hundreds of math problems designed to be solved with programs — each one a small, addictive puzzle."
+    },
+    {
+      "name": "Poolsuite FM",
+      "url": "https://poolsuite.net/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch",
+        "niche"
+      ],
+      "description": "An ultra-summer internet radio station wrapped in a Macintosh-flavored 80s interface."
+    },
+    {
+      "name": "Pointer Pointer",
+      "url": "https://pointerpointer.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch",
+        "narrow"
+      ],
+      "description": "Wherever you put your cursor, a stranger in a photo is pointing right at it."
+    },
+    {
       "name": "Poetry Foundation",
       "url": "https://www.poetryfoundation.org/",
       "added": "2026-07-02",
@@ -40,6 +375,56 @@
         "deep"
       ],
       "description": "A vast, searchable archive of poems and poets, plus essays and a daily poem."
+    },
+    {
+      "name": "Photopea",
+      "url": "https://www.photopea.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow",
+        "broad"
+      ],
+      "description": "A full Photoshop-grade image editor that runs entirely in the browser, free, no signup."
+    },
+    {
+      "name": "PhET Simulations",
+      "url": "https://phet.colorado.edu/",
+      "added": "2026-07-02",
+      "facets": [
+        "broad",
+        "niche"
+      ],
+      "description": "The University of Colorado's free interactive science and math simulations, used in classrooms worldwide."
+    },
+    {
+      "name": "Perseus Digital Library",
+      "url": "https://www.perseus.tufts.edu/",
+      "added": "2026-07-02",
+      "facets": [
+        "deep",
+        "niche"
+      ],
+      "description": "Tufts' vast library of Greek and Latin texts with linked translations, dictionaries and grammar tools."
+    },
+    {
+      "name": "Patatap",
+      "url": "https://patatap.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch",
+        "niche"
+      ],
+      "description": "Tap your keyboard and every key paints an animation with a sound. A portable visual-music kit."
+    },
+    {
+      "name": "Orb.farm",
+      "url": "https://orb.farm/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch",
+        "niche"
+      ],
+      "description": "Sculpt a self-sustaining glass aquarium ecosystem — algae, fish, bacteria — and watch it live."
     },
     {
       "name": "Openverse",
@@ -52,6 +437,35 @@
       "description": "Search across hundreds of millions of openly-licensed images and audio you can reuse freely."
     },
     {
+      "name": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "description": "The Wikipedia of maps — a free, editable map of the world maintained by millions of contributors."
+    },
+    {
+      "name": "OneLook",
+      "url": "https://onelook.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow"
+      ],
+      "description": "One search across dozens of dictionaries, with a reverse mode that finds the word from its meaning."
+    },
+    {
+      "name": "Omniglot",
+      "url": "https://www.omniglot.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "description": "An encyclopedia of the world's writing systems and languages, lovingly maintained for decades."
+    },
+    {
       "name": "Old Maps Online",
       "url": "https://www.oldmapsonline.org/",
       "added": "2026-07-02",
@@ -60,6 +474,293 @@
         "deep"
       ],
       "description": "Search historical maps from libraries worldwide by place and time. A gateway to cartographic archives."
+    },
+    {
+      "name": "MusicBrainz",
+      "url": "https://musicbrainz.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "description": "The open encyclopedia of music metadata — every release, recording and artist, community-maintained."
+    },
+    {
+      "name": "MetaFilter",
+      "url": "https://www.metafilter.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "obscure"
+      ],
+      "description": "One of the web's oldest link-and-discussion communities, still thoughtful after 25+ years."
+    },
+    {
+      "name": "Lobsters",
+      "url": "https://lobste.rs/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche"
+      ],
+      "description": "An invite-vetted computing community — like a smaller, calmer, tag-organized Hacker News."
+    },
+    {
+      "name": "LibriVox",
+      "url": "https://librivox.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "broad",
+        "niche"
+      ],
+      "description": "Volunteers reading public-domain books aloud — thousands of free audiobooks in dozens of languages."
+    },
+    {
+      "name": "Koalas to the Max",
+      "url": "https://www.koalastothemax.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch"
+      ],
+      "description": "Divide circles again and again until a hidden picture emerges. Deeply satisfying mouse doodling."
+    },
+    {
+      "name": "Internet Sacred Text Archive",
+      "url": "https://sacred-texts.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "obscure",
+        "deep"
+      ],
+      "description": "A quarter-century-old archive of scripture, mythology and folklore from every tradition, free to read."
+    },
+    {
+      "name": "IndieWeb",
+      "url": "https://indieweb.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "description": "The wiki and community for owning your own corner of the web — protocols, patterns and pep talks for personal sites."
+    },
+    {
+      "name": "IMSLP / Petrucci Music Library",
+      "url": "https://imslp.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "deep",
+        "niche"
+      ],
+      "description": "Over half a million scores of public-domain sheet music — practically all of classical music, free."
+    },
+    {
+      "name": "Heavens-Above",
+      "url": "https://www.heavens-above.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "narrow"
+      ],
+      "description": "Precise pass predictions for the ISS and thousands of satellites over your exact location."
+    },
+    {
+      "name": "Have I Been Pwned",
+      "url": "https://haveibeenpwned.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow"
+      ],
+      "description": "Check whether your email appears in known data breaches. The canonical breach lookup."
+    },
+    {
+      "name": "GifCities",
+      "url": "https://gifcities.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch",
+        "narrow"
+      ],
+      "description": "The Internet Archive's search engine for animated GIFs harvested from GeoCities. Under-construction signs forever."
+    },
+    {
+      "name": "Falstad Applets",
+      "url": "https://www.falstad.com/mathphysics.html",
+      "added": "2026-07-02",
+      "facets": [
+        "obscure",
+        "niche"
+      ],
+      "description": "A legendary trove of interactive physics simulations — circuits, waves, fields — hand-built by one person."
+    },
+    {
+      "name": "FRED",
+      "url": "https://fred.stlouisfed.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "deep",
+        "niche"
+      ],
+      "description": "The St. Louis Fed's free trove of 800,000+ economic time series, all chartable and downloadable."
+    },
+    {
+      "name": "Explorable Explanations",
+      "url": "https://explorabl.es/",
+      "added": "2026-07-02",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "description": "A hub of playable essays — learn ideas by fiddling with them instead of reading about them."
+    },
+    {
+      "name": "Excalidraw",
+      "url": "https://excalidraw.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow",
+        "niche"
+      ],
+      "description": "A virtual whiteboard for sketching hand-drawn-style diagrams. Open a tab, draw, share."
+    },
+    {
+      "name": "Europeana",
+      "url": "https://www.europeana.eu/",
+      "added": "2026-07-02",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "description": "Tens of millions of digitised artworks, books, and recordings from Europe's museums and archives."
+    },
+    {
+      "name": "Dwitter",
+      "url": "https://www.dwitter.net/",
+      "added": "2026-07-02",
+      "facets": [
+        "obscure",
+        "niche"
+      ],
+      "description": "Visual demos written in 140 characters of JavaScript. A whole demoscene inside a tweet's worth of code."
+    },
+    {
+      "name": "Directory of Open Access Journals",
+      "url": "https://doaj.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "deep",
+        "niche"
+      ],
+      "description": "The curated index of legitimate open-access journals — 20,000+ titles you can read without a paywall."
+    },
+    {
+      "name": "Digital Public Library of America",
+      "url": "https://dp.la/",
+      "added": "2026-07-02",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "description": "One search box across the digitised collections of America's libraries, archives and museums."
+    },
+    {
+      "name": "Desmos",
+      "url": "https://www.desmos.com/calculator",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow",
+        "broad"
+      ],
+      "description": "A graphing calculator so fluid it feels like a toy — plot, slide parameters, and share live graphs."
+    },
+    {
+      "name": "David Rumsey Map Collection",
+      "url": "https://www.davidrumsey.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "deep",
+        "niche"
+      ],
+      "description": "Over 100,000 historical maps scanned in extraordinary detail, free to explore and overlay on the modern world."
+    },
+    {
+      "name": "Compiler Explorer",
+      "url": "https://godbolt.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "narrow",
+        "niche"
+      ],
+      "description": "Type code, instantly see the assembly dozens of compilers produce. Indispensable for understanding what really runs."
+    },
+    {
+      "name": "Chronicling America",
+      "url": "https://chroniclingamerica.loc.gov/",
+      "added": "2026-07-02",
+      "facets": [
+        "deep",
+        "niche"
+      ],
+      "description": "The Library of Congress's searchable archive of American newspapers from 1756 onward."
+    },
+    {
+      "name": "Cameron's World",
+      "url": "https://www.cameronsworld.net/",
+      "added": "2026-07-02",
+      "facets": [
+        "kitsch",
+        "obscure"
+      ],
+      "description": "A scrolling love letter to GeoCities, collaged from thousands of archived pages. The old web in full glitter."
+    },
+    {
+      "name": "CORE",
+      "url": "https://core.ac.uk/",
+      "added": "2026-07-02",
+      "facets": [
+        "deep",
+        "broad"
+      ],
+      "description": "The world's largest aggregator of open-access research papers — hundreds of millions, full-text searchable."
+    },
+    {
+      "name": "Biodiversity Heritage Library",
+      "url": "https://www.biodiversitylibrary.org/",
+      "added": "2026-07-02",
+      "facets": [
+        "deep",
+        "niche"
+      ],
+      "description": "Centuries of natural history literature and illustration, scanned and free — where the old drawings of everything live."
+    },
+    {
+      "name": "BetterExplained",
+      "url": "https://betterexplained.com/",
+      "added": "2026-07-02",
+      "facets": [
+        "deep",
+        "niche"
+      ],
+      "description": "Math explained intuition-first — why ideas work, not just the formulas that state them."
+    },
+    {
+      "name": "Astronomy Picture of the Day",
+      "url": "https://apod.nasa.gov/apod/",
+      "added": "2026-07-02",
+      "facets": [
+        "deep",
+        "niche"
+      ],
+      "description": "NASA's one-image-a-day tour of the cosmos, running with an astronomer's caption since 1995."
+    },
+    {
+      "name": "Akiyoshi's Illusion Pages",
+      "url": "https://www.ritsumei.ac.jp/~akitaoka/index-e.html",
+      "added": "2026-07-02",
+      "facets": [
+        "obscure",
+        "kitsch"
+      ],
+      "description": "Psychology professor Akiyoshi Kitaoka's hand-made gallery of motion illusions that genuinely break your eyes."
     }
   ]
 }
