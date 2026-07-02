@@ -15,7 +15,7 @@ It is refreshed **once a week** by an automated routine and the portal
 <!-- STATS:START -->
 **115 sites** indexed · **77 new** in the last 14 days · updated 2026-07-02
 
-By facet: `obscure` 22 · `niche` 60 · `kitsch` 25 · `broad` 33 · `deep` 52 · `narrow` 31
+By facet: `obscure` 21 · `niche` 61 · `kitsch` 25 · `broad` 31 · `deep` 53 · `narrow` 31
 <!-- STATS:END -->
 
 ## The six facets

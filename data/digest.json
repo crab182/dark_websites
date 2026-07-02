@@ -382,7 +382,7 @@
       "added": "2026-07-02",
       "facets": [
         "narrow",
-        "broad"
+        "deep"
       ],
       "description": "A full Photoshop-grade image editor that runs entirely in the browser, free, no signup."
     },
@@ -490,8 +490,7 @@
       "url": "https://www.metafilter.com/",
       "added": "2026-07-02",
       "facets": [
-        "niche",
-        "obscure"
+        "niche"
       ],
       "description": "One of the web's oldest link-and-discussion communities, still thoughtful after 25+ years."
     },
@@ -668,7 +667,7 @@
       "added": "2026-07-02",
       "facets": [
         "narrow",
-        "broad"
+        "niche"
       ],
       "description": "A graphing calculator so fluid it feels like a toy — plot, slide parameters, and share live graphs."
     },
@@ -694,13 +693,13 @@
     },
     {
       "name": "Chronicling America",
-      "url": "https://chroniclingamerica.loc.gov/",
+      "url": "https://www.loc.gov/collections/chronicling-america/",
       "added": "2026-07-02",
       "facets": [
         "deep",
         "niche"
       ],
-      "description": "The Library of Congress's searchable archive of American newspapers from 1756 onward."
+      "description": "The Library of Congress's searchable archive of digitized American newspaper pages from 1777 to 1963."
     },
     {
       "name": "Cameron's World",

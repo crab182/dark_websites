@@ -617,7 +617,7 @@
       "description": "A full Photoshop-grade image editor that runs entirely in the browser, free, no signup.",
       "facets": [
         "narrow",
-        "broad"
+        "deep"
       ],
       "tags": [
         "tools",
@@ -793,8 +793,7 @@
       "url": "https://www.metafilter.com/",
       "description": "One of the web's oldest link-and-discussion communities, still thoughtful after 25+ years.",
       "facets": [
-        "niche",
-        "obscure"
+        "niche"
       ],
       "tags": [
         "community",
@@ -1080,7 +1079,7 @@
       "description": "A graphing calculator so fluid it feels like a toy — plot, slide parameters, and share live graphs.",
       "facets": [
         "narrow",
-        "broad"
+        "niche"
       ],
       "tags": [
         "math",
@@ -1124,8 +1123,8 @@
     {
       "id": "chronicling-america",
       "name": "Chronicling America",
-      "url": "https://chroniclingamerica.loc.gov/",
-      "description": "The Library of Congress's searchable archive of American newspapers from 1756 onward.",
+      "url": "https://www.loc.gov/collections/chronicling-america/",
+      "description": "The Library of Congress's searchable archive of digitized American newspaper pages from 1777 to 1963.",
       "facets": [
         "deep",
         "niche"
