@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+# Git pre-commit hook: validate the database before every commit.
+# Install with `make hook` (symlinks this file into .git/hooks/).
+set -eu
+cd "$(git rev-parse --show-toplevel)"
+python3 scripts/validate.py

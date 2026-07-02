@@ -65,16 +65,26 @@ The page fetches JSON, so serve the folder over HTTP rather than opening the
 file directly:
 
 ```bash
-python -m http.server 8000
+make serve            # or: python -m http.server 8000
 # then open http://localhost:8000
 ```
 
-In production it is published to GitHub Pages by `.github/workflows/deploy.yml`.
+### Deploying
+
+The site is **fully static** and every derived artifact (`feed.xml`,
+`data/stats.json`, …) is committed by the weekly routine, so there is no build
+step at deploy time — no CI service required. Host it with whatever serves
+files:
+
+- **GitHub Pages, branch mode** — Settings → Pages → *Deploy from a branch* →
+  `main` / root. Pages serves the repo directly; every push updates the site.
+- **Any static host or your own box** — `rsync` the checkout to a web root, or
+  point nginx/Caddy at it. Nothing to compile.
 
 ## How the weekly routine works
 
-`.github/workflows/weekly-update.yml` runs every **Monday 09:00 UTC** (and on
-demand via *Run workflow*). Each run:
+`scripts/weekly.sh` is the whole routine — a plain POSIX shell script you run
+**yourself or from cron**; no CI service involved. Each run:
 
 1. **Validates** the database (`scripts/validate.py`) — schema, required fields,
    allowed facets, unique ids and URLs.
@@ -83,16 +93,28 @@ demand via *Run workflow*). Each run:
    rebuilds the Atom [`feed.xml`](feed.xml), prepends new finds to
    [`FINDS.md`](FINDS.md), and updates the stats block in this README.
 3. **Link-checks** every URL (`scripts/linkcheck.py`) — best effort, never blocks
-   the build; results land in `data/linkcheck.json`.
-4. **Commits** anything that changed, which in turn triggers a redeploy.
+   the run; results land in `data/linkcheck.json`.
+4. **Commits** anything that changed and **pushes** it (set `PUSH=0` to commit
+   without pushing).
 
-Run the same steps by hand:
+Schedule it once a week from any machine with the repo cloned (`crontab -e`):
+
+```cron
+0 9 * * 1  cd /path/to/dark_websites && scripts/weekly.sh >> weekly.log 2>&1
+```
+
+…or the equivalent systemd timer / launchd job. Run the pieces by hand any
+time:
 
 ```bash
-python scripts/validate.py
-python scripts/build.py
-python scripts/linkcheck.py   # optional, needs network
+make validate    # python scripts/validate.py
+make build       # python scripts/build.py
+make linkcheck   # python scripts/linkcheck.py (needs network)
+make weekly      # the full routine incl. commit + push
 ```
+
+To guard commits locally (replacing CI validation), install the pre-commit
+hook once: `make hook`.
 
 ## Adding a find
 
@@ -110,8 +132,8 @@ Edit `data/sites.json` and add an object to `sites` (see
 | `data/stats.json`, `data/digest.json`, `data/linkcheck.json` | Generated; do not hand-edit. |
 | `feed.xml` | Generated Atom feed of new finds; do not hand-edit. |
 | `index.html`, `assets/` | The portal (HTML/CSS/vanilla JS). |
-| `scripts/` | `validate.py`, `build.py`, `linkcheck.py` — stdlib only. |
-| `.github/workflows/` | `validate`, `weekly-update`, `deploy`. |
+| `scripts/` | `validate.py`, `build.py`, `linkcheck.py` (stdlib only), `weekly.sh` (the cron routine), `pre-commit` (hook). |
+| `Makefile` | `validate` / `build` / `linkcheck` / `weekly` / `serve` / `hook`. |
 | `.github/ISSUE_TEMPLATE/` | `suggest-a-site.yml` — structured form for proposing a find. |
 | `FINDS.md` | Auto-generated diary of new additions. |
 

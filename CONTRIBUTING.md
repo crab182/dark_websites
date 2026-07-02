@@ -48,6 +48,7 @@ The fields above are the only ones allowed — the schema rejects extras.
 python scripts/validate.py
 ```
 
-Validation also runs in CI on every push and pull request. Keep entries sorted
+Install the local pre-commit hook (`make hook`) to run the same check
+automatically on every commit — there is no CI. Keep entries sorted
 however you like — `scripts/build.py` re-sorts the file (newest first) on the
 next weekly run.
