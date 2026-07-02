@@ -1,0 +1,26 @@
+{
+  "generated": "2026-06-29",
+  "window_days": 14,
+  "sites": [
+    {
+      "name": "Are.na",
+      "url": "https://www.are.na/",
+      "added": "2026-06-16",
+      "facets": [
+        "niche",
+        "deep"
+      ],
+      "description": "A calm, ad-free tool for collecting and connecting ideas, images and links into visual research channels."
+    },
+    {
+      "name": "Open Library",
+      "url": "https://openlibrary.org/",
+      "added": "2026-06-15",
+      "facets": [
+        "broad",
+        "deep"
+      ],
+      "description": "An open, editable catalogue aiming for one web page per book ever published, with many free to borrow."
+    }
+  ]
+}

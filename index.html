@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>dark_websites — a reference database of the useful, lesser-known web</title>
+  <meta name="description" content="A quick-reference portal of obscure, niche, kitsch, broad, deep and narrow corners of the web. Curated and refreshed weekly." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <h1><span class="mono">dark_websites</span></h1>
+      <p class="tag">A quick-reference portal of the useful, lesser-known web — independent search, deep archives, single-purpose tools and gloriously strange corners. Curated, faceted, and refreshed weekly.</p>
+      <div class="meta" id="meta">Loading database…</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls">
+      <label class="search">
+        <span class="icon">⌕</span>
+        <input id="search" type="search" placeholder="Search names, descriptions, tags…" autocomplete="off" aria-label="Search the database" />
+      </label>
+      <select id="sort" class="select" aria-label="Sort order">
+        <option value="newest">Newest first</option>
+        <option value="alpha">A → Z</option>
+      </select>
+    </section>
+
+    <div class="facets" id="facets" role="group" aria-label="Filter by facet"></div>
+    <div class="tagbar" id="tags" role="group" aria-label="Filter by tag"></div>
+
+    <section class="showcase" id="showcase" hidden>
+      <h2>✨ New finds</h2>
+      <p class="sub" id="showcase-sub"></p>
+      <div class="row" id="showcase-row"></div>
+    </section>
+
+    <div class="resultbar">
+      <span id="resultcount"></span>
+      <button class="clear" id="clear" hidden>Clear filters</button>
+    </div>
+
+    <section class="grid" id="grid" aria-live="polite"></section>
+    <p class="empty" id="empty" hidden>No sites match those filters.</p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>Every entry is a legitimate, public website. The database lives in
+        <a href="data/sites.json"><code>data/sites.json</code></a> — see
+        <a href="https://github.com/crab182/dark_websites/blob/main/CONTRIBUTING.md">CONTRIBUTING</a>
+        to suggest a find. Refreshed weekly by an automated routine.</p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+{
+  "results": [
+    {
+      "url": "https://www.are.na/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://openlibrary.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://kagi.com/smallweb/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://1mb.club/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://wikenigma.org.uk/",
+      "ok": false,
+      "status": 403
+    },
+    {
+      "url": "https://freesound.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://www.refseek.com/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://neocities.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://www.base-search.net/",
+      "ok": false,
+      "status": 403
+    },
+    {
+      "url": "https://neal.fun/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://pudding.cool/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://everything2.com/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://tvtropes.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://devdocs.io/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://caniuse.com/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://regex101.com/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://explainshell.com/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://gchq.github.io/CyberChef/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://shapecatcher.com/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://forvo.com/",
+      "ok": false,
+      "status": 403
+    },
+    {
+      "url": "https://detexify.kirelabs.org/classify.html",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://www.wikidata.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://ourworldindata.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://www.etymonline.com/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://publicdomainreview.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://solar.lowtechmagazine.com/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://www.atlasobscura.com/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://gwern.net/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://www.connectedpapers.com/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://ciechanow.ski/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://arxiv.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://libraryofbabel.info/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://oeis.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://wiby.me/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://web.archive.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://www.gutenberg.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://search.marginalia.nu/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://archive.org/",
+      "ok": true,
+      "status": 200
+    }
+  ],
+  "dead": 3
+}
