@@ -59,17 +59,23 @@ python3 scripts/linkcheck.py || echo "linkcheck reported problems (non-blocking)
 
 git add -A
 if git diff --cached --quiet; then
-    echo "-- no changes; done."
-    exit 0
+    echo "-- no new changes to commit."
+else
+    echo "-- commit"
+    # shellcheck disable=SC2086  # GIT_ID intentionally word-splits into -c flags
+    git $GIT_ID commit -m "chore: weekly database refresh"
 fi
 
-echo "-- commit"
-# shellcheck disable=SC2086  # GIT_ID intentionally word-splits into -c flags
-git $GIT_ID commit -m "chore: weekly database refresh"
-
+# Push whenever local is ahead of the remote — not only when this run made a
+# commit — so a commit stranded by an earlier failed push gets retried instead
+# of leaving the published site stale behind a "no changes" early exit.
 if [ "$PUSH" = "1" ]; then
-    echo "-- push to origin/$BRANCH"
-    git push origin "$BRANCH"
+    if [ "$(git rev-list --count "origin/$BRANCH..HEAD")" -gt 0 ]; then
+        echo "-- push to origin/$BRANCH"
+        git push origin "$BRANCH"
+    else
+        echo "-- nothing to push."
+    fi
 else
     echo "-- PUSH=0, skipping push"
 fi
