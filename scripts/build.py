@@ -19,6 +19,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import pathlib
+import re
 from collections import Counter
 from xml.sax.saxutils import escape
 
@@ -96,24 +97,37 @@ FINDS_HEADER = (
 
 
 def update_finds_log(digest: dict, today: dt.date) -> None:
+    """Prepend today's genuinely-new finds to the diary.
+
+    A site is logged at most once, ever: anything whose URL already appears
+    anywhere in FINDS.md is skipped, so weekly runs don't re-log sites that
+    are still inside the digest's 14-day window.
+    """
     if not digest["sites"]:
         return
-    section = f"## {today.isoformat()}\n\n"
-    section += "\n".join(
+
+    existing = FINDS.read_text(encoding="utf-8") if FINDS.exists() else ""
+    logged_urls = set(re.findall(r"\]\((https?://[^)\s]+)\)", existing))
+    fresh = [s for s in digest["sites"] if s["url"] not in logged_urls]
+    if not fresh:
+        return
+
+    lines = "\n".join(
         f"- [{s['name']}]({s['url']}) — {s['description']} "
         f"_({', '.join(s['facets'])})_"
-        for s in digest["sites"]
-    ) + "\n\n"
+        for s in fresh
+    )
 
-    # Body = everything after the fixed header. Newest section goes on top.
-    if FINDS.exists():
-        existing = FINDS.read_text(encoding="utf-8")
-        if f"## {today.isoformat()}" in existing:
-            return  # already logged today; don't duplicate
-        body = existing[len(FINDS_HEADER):] if existing.startswith(FINDS_HEADER) else existing
-    else:
-        body = ""
+    heading = f"## {today.isoformat()}"
+    if heading in existing:
+        # A section for today already exists (e.g. a second batch added the
+        # same day) — insert the new lines at the top of that section.
+        updated = existing.replace(f"{heading}\n\n", f"{heading}\n\n{lines}\n", 1)
+        FINDS.write_text(updated, encoding="utf-8")
+        return
 
+    section = f"{heading}\n\n{lines}\n\n"
+    body = existing[len(FINDS_HEADER):] if existing.startswith(FINDS_HEADER) else existing
     FINDS.write_text(FINDS_HEADER + section + body, encoding="utf-8")
 
 
