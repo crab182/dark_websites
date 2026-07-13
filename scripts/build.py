@@ -7,7 +7,7 @@ Run by the weekly routine (and safe to run by hand). It:
   * writes data/stats.json (totals, per-facet and per-tag counts),
   * writes data/digest.json — the sites added in the last `NEW_WINDOW_DAYS`
     days, which is what "showcase new finds" draws from,
-  * prepends a dated entry to FINDS.md when there are new finds,
+  * regenerates FINDS.md — the diary of finds grouped by added date,
   * writes feed.xml — an Atom feed of the most recent additions so people
     can subscribe to new finds,
   * refreshes the stats block in README.md between the marker comments.
@@ -18,8 +18,8 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import itertools
 import pathlib
-import re
 from collections import Counter
 from xml.sax.saxutils import escape
 
@@ -96,39 +96,24 @@ FINDS_HEADER = (
 )
 
 
-def update_finds_log(digest: dict, today: dt.date) -> None:
-    """Prepend today's genuinely-new finds to the diary.
+def update_finds_log(doc: dict) -> None:
+    """Regenerate the whole diary from the database.
 
-    A site is logged at most once, ever: anything whose URL already appears
-    anywhere in FINDS.md is skipped, so weekly runs don't re-log sites that
-    are still inside the digest's 14-day window.
+    One section per `added` date (newest first), each site listed exactly
+    once. Fully generative — no parsing of the previous file — so it can't
+    drift, duplicate, or mis-date entries regardless of when the routine
+    runs or what characters a URL contains.
     """
-    if not digest["sites"]:
-        return
-
-    existing = FINDS.read_text(encoding="utf-8") if FINDS.exists() else ""
-    logged_urls = set(re.findall(r"\]\((https?://[^)\s]+)\)", existing))
-    fresh = [s for s in digest["sites"] if s["url"] not in logged_urls]
-    if not fresh:
-        return
-
-    lines = "\n".join(
-        f"- [{s['name']}]({s['url']}) — {s['description']} "
-        f"_({', '.join(s['facets'])})_"
-        for s in fresh
-    )
-
-    heading = f"## {today.isoformat()}"
-    if heading in existing:
-        # A section for today already exists (e.g. a second batch added the
-        # same day) — insert the new lines at the top of that section.
-        updated = existing.replace(f"{heading}\n\n", f"{heading}\n\n{lines}\n", 1)
-        FINDS.write_text(updated, encoding="utf-8")
-        return
-
-    section = f"{heading}\n\n{lines}\n\n"
-    body = existing[len(FINDS_HEADER):] if existing.startswith(FINDS_HEADER) else existing
-    FINDS.write_text(FINDS_HEADER + section + body, encoding="utf-8")
+    sites = sort_sites(doc["sites"])
+    out = [FINDS_HEADER]
+    for date, group in itertools.groupby(sites, key=lambda s: s.get("added", "")):
+        out.append(f"## {date}\n\n")
+        out.append("\n".join(
+            f"- [{s['name']}]({s['url']}) — {s['description']} "
+            f"_({', '.join(s['facets'])})_"
+            for s in group
+        ) + "\n\n")
+    FINDS.write_text("".join(out), encoding="utf-8")
 
 
 def build_feed(doc: dict, today: dt.date) -> str:
@@ -199,7 +184,7 @@ def main() -> int:
 
     FEED.write_text(build_feed(doc, today), encoding="utf-8")
 
-    update_finds_log(digest, today)
+    update_finds_log(doc)
     update_readme(stats)
 
     print(
