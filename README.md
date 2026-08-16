@@ -13,7 +13,7 @@ It is refreshed **once a week** by an automated routine and the portal
 **showcases the newest finds** up front.
 
 <!-- STATS:START -->
-**115 sites** indexed · **77 new** in the last 14 days · updated 2026-07-02
+**115 sites** indexed · **77 new** in the last 14 days · updated 2026-07-13
 
 By facet: `obscure` 21 · `niche` 61 · `kitsch` 25 · `broad` 31 · `deep` 53 · `narrow` 31
 <!-- STATS:END -->

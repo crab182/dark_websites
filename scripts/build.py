@@ -7,7 +7,7 @@ Run by the weekly routine (and safe to run by hand). It:
   * writes data/stats.json (totals, per-facet and per-tag counts),
   * writes data/digest.json — the sites added in the last `NEW_WINDOW_DAYS`
     days, which is what "showcase new finds" draws from,
-  * prepends a dated entry to FINDS.md when there are new finds,
+  * regenerates FINDS.md — the diary of finds grouped by added date,
   * writes feed.xml — an Atom feed of the most recent additions so people
     can subscribe to new finds,
   * refreshes the stats block in README.md between the marker comments.
@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import itertools
 import pathlib
 from collections import Counter
 from xml.sax.saxutils import escape
@@ -95,26 +96,24 @@ FINDS_HEADER = (
 )
 
 
-def update_finds_log(digest: dict, today: dt.date) -> None:
-    if not digest["sites"]:
-        return
-    section = f"## {today.isoformat()}\n\n"
-    section += "\n".join(
-        f"- [{s['name']}]({s['url']}) — {s['description']} "
-        f"_({', '.join(s['facets'])})_"
-        for s in digest["sites"]
-    ) + "\n\n"
+def update_finds_log(doc: dict) -> None:
+    """Regenerate the whole diary from the database.
 
-    # Body = everything after the fixed header. Newest section goes on top.
-    if FINDS.exists():
-        existing = FINDS.read_text(encoding="utf-8")
-        if f"## {today.isoformat()}" in existing:
-            return  # already logged today; don't duplicate
-        body = existing[len(FINDS_HEADER):] if existing.startswith(FINDS_HEADER) else existing
-    else:
-        body = ""
-
-    FINDS.write_text(FINDS_HEADER + section + body, encoding="utf-8")
+    One section per `added` date (newest first), each site listed exactly
+    once. Fully generative — no parsing of the previous file — so it can't
+    drift, duplicate, or mis-date entries regardless of when the routine
+    runs or what characters a URL contains.
+    """
+    sites = sort_sites(doc["sites"])
+    out = [FINDS_HEADER]
+    for date, group in itertools.groupby(sites, key=lambda s: s.get("added", "")):
+        out.append(f"## {date}\n\n")
+        out.append("\n".join(
+            f"- [{s['name']}]({s['url']}) — {s['description']} "
+            f"_({', '.join(s['facets'])})_"
+            for s in group
+        ) + "\n\n")
+    FINDS.write_text("".join(out), encoding="utf-8")
 
 
 def build_feed(doc: dict, today: dt.date) -> str:
@@ -185,7 +184,7 @@ def main() -> int:
 
     FEED.write_text(build_feed(doc, today), encoding="utf-8")
 
-    update_finds_log(digest, today)
+    update_finds_log(doc)
     update_readme(stats)
 
     print(
