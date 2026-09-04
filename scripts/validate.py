@@ -10,12 +10,16 @@ from __future__ import annotations
 import datetime as dt
 import json
 import pathlib
+import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "sites.json"
 
 ALLOWED_FACETS = {"obscure", "niche", "kitsch", "broad", "deep", "narrow"}
+# Matches data/sites.schema.json and the ownership rule in rag_sync.py —
+# every valid id must map to a "<id>.md" source the sync can later delete.
+ID_RE = re.compile(r"^[a-z0-9-]+$")
 
 
 def _is_date(value: str) -> bool:
@@ -61,11 +65,16 @@ def validate(doc: dict) -> list[str]:
             if key not in site:
                 errors.append(f"{name}: missing field {key!r}")
 
-        sid = site.get("id", "")
-        if sid:
-            if sid in seen_ids:
+        # Validate the id whenever the key is present — an empty string must
+        # fail here, not surface later as an uncleanable ".md" RAG source.
+        if "id" in site:
+            sid = site["id"]
+            if not isinstance(sid, str) or not ID_RE.fullmatch(sid):
+                errors.append(f"{name}: id must be non-empty lowercase [a-z0-9-]+ -> {sid!r}")
+            elif sid in seen_ids:
                 errors.append(f"{name}: duplicate id {sid!r} (also {where})")
-            seen_ids[sid] = i
+            else:
+                seen_ids[sid] = i
 
         url = site.get("url", "")
         if url and not url.startswith(("http://", "https://")):
