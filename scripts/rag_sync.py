@@ -88,7 +88,7 @@ def render_site(site: dict) -> str:
 def main() -> int:
     dry_run = "--dry-run" in sys.argv
 
-    if not COLLECTION_RE.match(COLLECTION):
+    if not COLLECTION_RE.fullmatch(COLLECTION):
         print("ERROR: RAG_COLLECTION must be 1-64 chars of letters, digits, "
               f"'_' or '-' (got {COLLECTION!r}).", file=sys.stderr)
         return 2
@@ -103,7 +103,7 @@ def main() -> int:
     # Refuse to ingest any id the cleanup pass couldn't later reclaim
     # (rag_sync can run standalone, without weekly.sh's validate-first step).
     bad_ids = [repr(s.get("id", "")) for s in sites
-               if not SOURCE_RE.match(f"{s.get('id', '')}.md")]
+               if not SOURCE_RE.fullmatch(f"{s.get('id', '')}.md")]
     if bad_ids:
         print(f"ERROR: ids must be non-empty lowercase [a-z0-9-]+; offending: "
               f"{', '.join(bad_ids[:5])}{' …' if len(bad_ids) > 5 else ''}. "
@@ -160,7 +160,7 @@ def main() -> int:
         print(f"  NOTE: skipping stale cleanup — {failed} ingest(s) failed this run.")
     else:
         for src in sorted(existing - set(desired)):
-            if not SOURCE_RE.match(src):
+            if not SOURCE_RE.fullmatch(src):
                 print(f"  WARNING: unmanaged document in '{COLLECTION}': {src} (left alone)")
                 continue
             try:

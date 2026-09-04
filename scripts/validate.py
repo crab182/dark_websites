@@ -69,7 +69,7 @@ def validate(doc: dict) -> list[str]:
         # fail here, not surface later as an uncleanable ".md" RAG source.
         if "id" in site:
             sid = site["id"]
-            if not isinstance(sid, str) or not ID_RE.match(sid):
+            if not isinstance(sid, str) or not ID_RE.fullmatch(sid):
                 errors.append(f"{name}: id must be non-empty lowercase [a-z0-9-]+ -> {sid!r}")
             elif sid in seen_ids:
                 errors.append(f"{name}: duplicate id {sid!r} (also {where})")
