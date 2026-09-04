@@ -99,6 +99,17 @@ def main() -> int:
 
     doc = json.loads(DATA.read_text(encoding="utf-8"))
     sites = doc["sites"]
+
+    # Refuse to ingest any id the cleanup pass couldn't later reclaim
+    # (rag_sync can run standalone, without weekly.sh's validate-first step).
+    bad_ids = [repr(s.get("id", "")) for s in sites
+               if not SOURCE_RE.match(f"{s.get('id', '')}.md")]
+    if bad_ids:
+        print(f"ERROR: ids must be non-empty lowercase [a-z0-9-]+; offending: "
+              f"{', '.join(bad_ids[:5])}{' …' if len(bad_ids) > 5 else ''}. "
+              f"Run scripts/validate.py.", file=sys.stderr)
+        return 2
+
     desired = {f"{s['id']}.md": s for s in sites}
 
     if dry_run:

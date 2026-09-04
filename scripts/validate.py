@@ -65,13 +65,16 @@ def validate(doc: dict) -> list[str]:
             if key not in site:
                 errors.append(f"{name}: missing field {key!r}")
 
-        sid = site.get("id", "")
-        if sid:
-            if not ID_RE.match(sid):
-                errors.append(f"{name}: id must be lowercase [a-z0-9-]+ -> {sid!r}")
-            if sid in seen_ids:
+        # Validate the id whenever the key is present — an empty string must
+        # fail here, not surface later as an uncleanable ".md" RAG source.
+        if "id" in site:
+            sid = site["id"]
+            if not isinstance(sid, str) or not ID_RE.match(sid):
+                errors.append(f"{name}: id must be non-empty lowercase [a-z0-9-]+ -> {sid!r}")
+            elif sid in seen_ids:
                 errors.append(f"{name}: duplicate id {sid!r} (also {where})")
-            seen_ids[sid] = i
+            else:
+                seen_ids[sid] = i
 
         url = site.get("url", "")
         if url and not url.startswith(("http://", "https://")):
