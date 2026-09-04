@@ -59,6 +59,25 @@ gives you:
 additions, newest first. Point any RSS reader at
 `https://crab182.github.io/dark_websites/feed.xml` to get new finds as they land.
 
+### Search it semantically (RAG)
+
+The database can be mirrored into the companion **rag-mcp-server** stack
+(the self-hosted document-RAG in the `ziglings` repo), making every site
+searchable by meaning from any MCP client:
+
+```bash
+RAG_ADMIN_KEY=<admin key> make rag-sync
+# optional: RAG_URL (default http://localhost:8900), RAG_COLLECTION (default dark-websites)
+```
+
+Each site becomes one small markdown document (`<id>.md`) in the collection.
+Re-runs are cheap — the backend content-hashes each document and only
+re-embeds sites that actually changed; sites removed from the database are
+deleted from the collection. The collection is **owned by the sync**: don't
+upload other documents into it. Set `RAG_ADMIN_KEY` in the weekly cron
+environment and the routine syncs automatically after each refresh
+(best-effort, never blocks).
+
 ### Run it locally
 
 The page fetches JSON, so serve the folder over HTTP rather than opening the
@@ -94,6 +113,8 @@ files:
    [`FINDS.md`](FINDS.md), and updates the stats block in this README.
 3. **Link-checks** every URL (`scripts/linkcheck.py`) — best effort, never blocks
    the run; results land in `data/linkcheck.json`.
+   Then, if `RAG_ADMIN_KEY` is set, **syncs the database into the RAG stack**
+   (`scripts/rag_sync.py`, best effort).
 4. **Commits** anything that changed and **pushes** it (set `PUSH=0` to commit
    without pushing).
 
@@ -132,8 +153,8 @@ Edit `data/sites.json` and add an object to `sites` (see
 | `data/stats.json`, `data/digest.json`, `data/linkcheck.json` | Generated; do not hand-edit. |
 | `feed.xml` | Generated Atom feed of new finds; do not hand-edit. |
 | `index.html`, `assets/` | The portal (HTML/CSS/vanilla JS). |
-| `scripts/` | `validate.py`, `build.py`, `linkcheck.py` (stdlib only), `weekly.sh` (the cron routine), `pre-commit` (hook). |
-| `Makefile` | `validate` / `build` / `linkcheck` / `weekly` / `serve` / `hook`. |
+| `scripts/` | `validate.py`, `build.py`, `linkcheck.py`, `rag_sync.py` (stdlib only), `weekly.sh` (the cron routine), `pre-commit` (hook). |
+| `Makefile` | `validate` / `build` / `linkcheck` / `rag-sync` / `weekly` / `serve` / `hook`. |
 | `.github/ISSUE_TEMPLATE/` | `suggest-a-site.yml` — structured form for proposing a find. |
 | `FINDS.md` | Auto-generated diary of new additions. |
 

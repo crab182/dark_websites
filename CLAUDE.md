@@ -26,6 +26,12 @@ Conventions for agents working on this repo.
 - Before pushing: `make validate` (or install the hook once with `make hook`).
 - Facets are fixed: `obscure`, `niche`, `kitsch`, `broad`, `deep`, `narrow`.
   Every entry must be a legitimate, public website.
+- `scripts/rag_sync.py` mirrors the database into the companion
+  rag-mcp-server (`ziglings` repo) — opt-in via `RAG_ADMIN_KEY`, wired into
+  `weekly.sh` as a best-effort step. The target collection (default
+  `dark-websites`) is owned by the sync: sources are `<site-id>.md` and
+  anything else there is warned about, stale ids are deleted. Test against
+  a stub of the backend REST API; the real stack needs heavyweight deps.
 - Note for sandboxed sessions: `scripts/linkcheck.py` reports every URL as 403
   through the remote-execution proxy — don't commit `data/linkcheck.json`
   produced in a sandbox; keep the last real results.

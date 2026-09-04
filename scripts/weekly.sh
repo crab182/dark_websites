@@ -65,6 +65,13 @@ python3 scripts/build.py
 echo "-- link check (best effort)"
 python3 scripts/linkcheck.py || echo "linkcheck reported problems (non-blocking); see data/linkcheck.json"
 
+# Opt-in: push the database into the companion RAG stack so the sites are
+# semantically searchable. Runs only when RAG_ADMIN_KEY is set; never blocks.
+if [ -n "${RAG_ADMIN_KEY:-}" ]; then
+    echo "-- RAG sync (best effort)"
+    python3 scripts/rag_sync.py || echo "RAG sync reported problems (non-blocking)"
+fi
+
 # Stage only what the routine itself generates — never a blanket add -A, so
 # nothing unrelated can ride along even if files change mid-run.
 git add data/ feed.xml FINDS.md README.md
